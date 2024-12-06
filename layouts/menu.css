@@ -52,9 +52,6 @@ object-fit: cover;
 opacity: 0.5;
 position: relative; /* Allows positioning text on top of the image */
 transition: all 0.3s ease;
-&:hover{
-    opacity: 0.3;
-}
 }
 
 .innerbox a {
@@ -70,6 +67,9 @@ position: relative; /* Ensures text is positioned relative to the image */
 .innerbox a:hover {
 scale: 1.1;
 z-index: 200;
+img{
+    opacity: 0.3;
+}
 .category-label{
     scale: 1.2;
 }
