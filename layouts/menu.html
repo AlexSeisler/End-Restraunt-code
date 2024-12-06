@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="image/x-icon" href="../assets/Logos/logo-white.png" />
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="../font.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="categories">
+            <div class="innerbox">
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Entree')">
+                        <img src="https://media.istockphoto.com/id/1403973419/photo/table-top-of-food-spread-on-table.jpg?s=612x612&w=0&k=20&c=2cROUMurZUtuvqF-bp8lViZ0wDXBNkZBcIjQj2QQlec=" alt="Entree" title="Entree">
+                        <div class="category-label">Entree</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Appetizer')">
+                        <img src="https://cdn1.harryanddavid.com/wcsstore/HarryAndDavid/images/catalog/18_32554_30J_02ex.jpg" alt="Appetizer" title="Appetizer">
+                        <div class="category-label">Appetizer</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Dessert')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Desserts.jpg/640px-Desserts.jpg" alt="Dessert" title="Dessert">
+                        <div class="category-label">Dessert</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Drinks')">
+                        <img src="https://i5.walmartimages.com/asr/437705b6-389d-4712-b3d2-2a7479f0e730.7715ce83c0f2bab8a5da36abe8c9df1c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Drinks" title="Drinks">
+                        <div class="category-label">Drinks</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Vegan')">
+                        <img src="https://www.bobvila.com/wp-content/uploads/2024/05/iStock-1418173645-vegetable-garden-layout.jpg?quality=85" alt="Vegan" title="Vegan">
+                        <div class="category-label">Vegan</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Pizza')">
+                        <img src="https://www.simplyrecipes.com/thmb/pjYMLcsKHkr8D8tYixmaFNxppPw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg" alt="Pizza" title="Pizza">
+                        <div class="category-label">Pizza</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Mains')">
+                        <img src="https://www.317mainstreet.com/wp-content/uploads/Table-Menu-All.jpg" alt="Mains" title="Mains">
+                        <div class="category-label">Mains</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Handhelds')">
+                        <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2017/7/13/0/Original_Sam-Henderson_Pie-crust-Recipes_empanadas-1.jpg.rend.hgtvcom.616.462.suffix/1499992100546.jpeg" alt="Handhelds" title="Handhelds">
+                        <div class="category-label">Handhelds</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Wings')">
+                        <img src="https://bakerbynature.com/wp-content/uploads/2015/02/Sweet-and-Spicy-Sriracha-Chicken-Wings-0-6.jpg" alt="Wings" title="Wings">
+                        <div class="category-label">Wings</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Oysters')">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNDNbTH-J8RWTPQLVyqWlkCsXnkxTFk0MNGs80m=w640-h640-n-k-no" alt="Oysters" title="Oysters">
+                        <div class="category-label">Oysters</div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="#" onclick="filterItemsByCategory('Kids')">
+                        <img src="https://www.shutterstock.com/image-vector/kids-menu-doodle-icons-vector-260nw-1806762082.jpg" alt="Kids" title="Kids">
+                        <div class="category-label">Kids</div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="main">
+            <div class="cart">
+                <div class="top">
+                    <h1>your cart</h1>
+                    <div class="mm-exit"><a href="mainpage.html"><ion-icon name="close-outline" id="exit"></ion-icon></a>
+                    </div>
+            </div>
+                
+                <div class="items">
+                    your cart is empty
+                </div>
+            </div>
+            <div class="menu">
+                <h1 class="category-title">Menu</h1>
+                <div class="menu-items" id="menu-items">
+                    
+                </div>
+            </div>
+            <div class="pay-button">
+                <button onclick="location.href='payment.html'">Proceed to Payment</button>
+            </div>       
+        </div>
+    </div>
+    
+    <div class="item-popup" style="display: none;">
+        <div class="left">
+            <div class="img"></div>
+            <div class="info"></div>
+        </div>
+        <div class="right">
+            <div class="title"></div>
+            <div class="details"></div>
+            <div class="button-box">
+                <div class="button">Add to Cart</div>
+                <div class="button">Cancel</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Display the menu items when the page loads
+        localStorage.setItem('tempCart', false);
+        displayMenuItems();
+        setCart();
+        updateCartDisplay();
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initialScale=1.0">
+        <title>Main Page</title>
+        <link rel="icon" type="image/x-icon" href="../assets/Logos/logo-white.png" />
+        <link rel="stylesheet" href="./mainpage.css">
+        <link rel="stylesheet" href="../font.css">
+        <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <script src="survey.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <div class="logo">
+                    <img src="../assets/Logos/logo-black.png">
+                </div>
+                <div class="header-title">
+                    <h1>SPRING HOUSE BREWING CO.</h1>
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="mainpage.html">Main</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="../Login Page/log.html" onclick="logOut()">Log Out</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="main">
+            <div class="intro">
+                <div class="intro-title">
+                    <img src="../assets/Logos/Wordmark-white.png" alt="">
+                </div>
+                <div class="intro-text"><p>fresh pours. good grub.</p></div>
+                <a href="./menu.html" class="order-button">ORDER</a>
+                <a href="#" class="scroll"><ion-icon name="caret-down-outline" id="scroll-icon"></ion-icon></a>
+            </div>
+            <div class="content" id="content1">
+                <div class="img"></div>
+                <div class="con con-right">
+                    <div class="header"><h1>header</h1></div>
+                    <div class="description"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, tempore voluptatem, corporis enim, numquam soluta dicta quam id hic adipisci quisquam at explicabo dolore velit amet et repellendus! Eligendi, dolorum.</p></div>
+                    <a href="./menu.html" class="order-button">BUY</a>
+                </div>
+            </div>
+            <div class="content" id='content2'>
+                <div class="con con-left">
+                    <div class="header"><h1>header</h1></div>
+                    <div class="description"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, in sunt. Sed at earum tempore asperiores! Itaque natus non dignissimos aliquam corporis ut obcaecati aut optio, repellat nisi cum ad?</p></div>
+                    <a href="./menu.html" class="order-button">BUY</a>
+                </div>
+                <div class="img"></div>
+            </div>
+            <div class="survey">
+                <div class="formbox">
+                    <img src="../assets/building/outside.jpg" alt="">
+                    <div class="container">
+                        <h1 id="survey-header">Code Cravings Review</h1>
+                        <div class="rates">
+                            <div class="setter">
+                                <div class="rating">
+                                    <span id="rating">0</span>/5
+                                </div>
+                                    <div id="stars">
+                                        <span class="star" data-value="1" onclick="handleStarClick(1)">★</span>
+                                        <span class="star" data-value="2" onclick="handleStarClick(2)">★</span>
+                                        <span class="star" data-value="3" onclick="handleStarClick(3)">★</span>
+                                        <span class="star" data-value="4" onclick="handleStarClick(4)">★</span>
+                                        <span class="star" data-value="5" onclick="handleStarClick(5)">★</span>
+                                    </div>
+                                </div>
+                            <div class="form-inputs">
+
+                                <textarea id="review" placeholder="Write your review here..."></textarea>
+                                <button id="submit" onclick="handleSubmit()" class="order-button">Submit Review</button>
+                            </div>
+                            <div id="reviews"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script>
+            function logOut(){
+                //key
+                // loggedIn == username
+                // users == dictionary of users
+                // cart == cart of items
+                if (!localStorage.getItem('loggedIn')){
+                    localStorage.setItem('loggedIn', false)
+                    return
+                }
+                else if(localStorage.getItem('loggedIn') == false){
+                    localStorage.setItem('loggedIn', false)
+                    return
+                }
+                loggedIn = localStorage.getItem('loggedIn');
+                users = JSON.parse(localStorage.getItem('users'));
+                cart = JSON.parse(localStorage.getItem('cart'));
+                users[loggedIn].cart = JSON.stringify(cart);
+                localStorage.setItem('users' , JSON.stringify(users))
+                localStorage.setItem('loggedIn', false)
+                //clear order items
+                localStorage.setItem('cart', JSON.stringify({}))
+                localStorage.setItem('loginSend', false);
+            }
+            function displayFeaturedItemInContainer(itemConID, item){
+                container = document.getElementById(itemConID);
+                
+                img = document.createElement('img');
+                img.style = 'object-fit: cover; width: 100%; height: 100%'
+                img.src = item.image;
+                img.alt = item.name;
+                container.getElementsByClassName('img')[0].appendChild(img);
+                container.getElementsByClassName('header')[0].querySelector('h1').innerHTML = item.name;
+                container.getElementsByClassName('description')[0].querySelector('p').innerHTML = item.description;
+
+            }
+            function displayFeaturedItems(){
+                const items = JSON.parse(localStorage.getItem('menuItems'))
+                itemsLength = Object.keys(items).length;
+                console.log(itemsLength)
+                if (itemsLength > 2){
+                    let rand1 = Math.floor(Math.random() * itemsLength);
+                    let rand2 = rand1+1;
+                    if (rand2 == itemsLength){
+                        rand2 = 0;
+                    }
+                    console.log(rand1,rand2)
+                    let item1 = items[Object.keys(items)[rand1]];
+                    let item2 = items[Object.keys(items)[rand2]];
+                    displayFeaturedItemInContainer('content1', item1);
+                    displayFeaturedItemInContainer('content2', item2);
+                }
+            }
+            displayFeaturedItems();
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
