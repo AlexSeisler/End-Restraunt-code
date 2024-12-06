@@ -214,7 +214,10 @@
 .add-new-card button:hover, .section button:hover {
     background-color: rgb(150, 50, 50);
 }
+.section {
+    color: rgb(80, 63, 42);
 
+}
 .section h2 {
     font-size: 1.8rem;
     font-weight: bold;
