@@ -7,56 +7,56 @@ var defaultItems = [
  // WOOD FIRED PIZZAS
  {
     name: "#1 Pizza - Plain Cheese",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Red sauce, mozzarella.",
     price: "15.00",
     image: "https://kitchenatics.com/wp-content/uploads/2020/09/Cheese-pizza-1-500x375.jpg"
 },
 {
     name: "#2 Pizza",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Red sauce, fresh mozzarella, sliced tomato, balsamic, basil.",
     price: "16.00",
     image: "https://www.killingthyme.net/wp-content/uploads/2020/06/Caprese-Pizza-500x375.jpg"
 },
 {
     name: "#3 Pizza",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Red sauce, mozzarella, bacon, pepperoni, hot honey drizzle, grated parmesan.",
     price: "17.00",
     image: "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/rshepivg/b1cc09ed-c5f3-45f9-b211-c131f253865b.jpg"
 },
 {
     name: "#4 Pizza",
-    categories: ["Wood Fired Pizzas", "Vegetarian"],
+    categories: ["Pizza", "Vegan"],
     description: "Ricotta, mozzarella, mushroom, spinach, fire-roasted tomatoes, grated parmesan, pesto drizzle.",
     price: "17.00",
     image: "https://img.cdn4dd.com/p/fit=cover,width=1200,height=1200,format=auto,quality=90/media/photosV2/60d2d8c1-82c4-4f2b-92d2-faae1ecae7e5-retina-large.JPG"
 },
 {
     name: "#5 Pizza",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Garlic oil, fresh mozzarella, prosciutto, caramelized onion, arugula, balsamic drizzle, grated parmesan.",
     price: "18.00",
     image: "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-87296000000000000/menu/items/9/item-600000003401343449_1681929310.jpg?size=medium"
 },
 {
     name: "#6 Pizza",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Red sauce, mozzarella, sausage, green pepper, red onion.",
     price: "17.00",
     image: "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-87296000000000000/menu/items/5/item-600000003401343445_1721274839.jpg?size=medium"
 },
 {
     name: "#7 Pizza",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Dill ranch, mozzarella, dill pickle, bacon.",
     price: "16.00",
     image: "../images/7pizza.jpeg"
 },
 {
     name: "Calzone",
-    categories: ["Wood Fired Pizzas"],
+    categories: ["Pizza"],
     description: "Ricotta, mozzarella, ham, garlic butter crust, side red sauce.",
     price: "18.00",
     image: "https://kendellkreations.com/wp-content/uploads/2023/01/8316B66D-010D-4623-8B96-5B3D87C64C85-scaled-540x720.jpg"
@@ -106,7 +106,7 @@ var defaultItems = [
 },
 {
     name: "Sweet Potato Fries",
-    categories: ["Appetizer", "Dessert", "For the Table"],
+    categories: ["Appetizer", "For the Table"],
     description: "Cinnamon sugar coated, served with maple bacon aioli.",
     price: "9.00",
     image: "https://peanutbutterandjilly.com/wp-content/uploads/2020/11/IMG_6679-1.jpg"
@@ -129,7 +129,7 @@ var defaultItems = [
 },
 {
     name: "Winter Salad",
-    categories: ["Salad", "Entree", "Vegetarian"],
+    categories: ["Salad", "Entree", "Vegan"],
     description: "Mixed greens, granny smith apples, candied pecans, bleu cheese, dried cranberries.",
     price: "15.00",
     image: "https://twokooksinthekitchen.com/wp-content/uploads/2019/12/IMG_9340-4.webp"
@@ -145,7 +145,7 @@ var defaultItems = [
 },
 {
     name: "Tomato Bisque",
-    categories: ["Soup", "Appetizer", "Vegetarian"],
+    categories: ["Soup", "Appetizer", "Vegan"],
     description: "Herbed tomato cream, parmesan crisp, basil.",
     price: "6.00",
     image: "https://smackofflavor.com/wp-content/uploads/2020/09/Creamy-Tomato-Bisque-4.jpg"
@@ -153,7 +153,7 @@ var defaultItems = [
 // MAINS
 {
     name: "Tortellini",
-    categories: ["Entree", "Mains", "Vegetarian"],
+    categories: ["Entree", "Mains", "Vegan"],
     description: "Three-cheese tortellini, asiago sage cream sauce, crispy kale.",
     price: "21.00",
     image: "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2022-03_Tortellni-Alfredo%2F2022-03-08_ATK-6858"
@@ -225,7 +225,7 @@ var defaultItems = [
 },
 {
     name: "Fig & Brie Sandwich",
-    categories: ["Handhelds", "Entree", "Vegetarian"],
+    categories: ["Handhelds", "Entree", "Vegan"],
     description: "Fig jam, creamy brie cheese, sliced granny smith apples, caramelized red onions, arugula, rustic sourdough.",
     price: "16.00",
     image: "../images/fig.jpeg"
@@ -255,7 +255,7 @@ var defaultItems = [
 },
 {
     name: "Veggie Wings",
-    categories: ["Appetizer", "Wings", "Vegetarian"],
+    categories: ["Appetizer", "Wings", "Vegan"],
     description: "Cauliflower bites tossed in your choice of sauce.",
     price: "9.00",
     image: "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-87296000000000000/menu/items/4/item-600000015444188404_1720733846.jpg?size=medium"
@@ -300,7 +300,7 @@ var defaultItems = [
 },
 {
     name: "Mac & Cheese",
-    categories: ["Kids", "Entree", "Vegetarian"],
+    categories: ["Kids", "Entree", "Vegan"],
     description: "Classic creamy mac and cheese served with applesauce. Substitute fries for +2.",
     price: "7.00",
     image: "https://mykidslickthebowl.com/wp-content/uploads/2020/06/healthy-mac-n-cheese-1-of-2020-4.jpg"
@@ -477,7 +477,7 @@ function displayMenuItems1() {
     menuItemsContainer.innerHTML = ''; // Clear the current content
 
     const items = JSON.parse(localStorage.getItem('menuItems')) || []; // Get items from localStorage
-    console.log();
+    console.log(items);
     // Iterate through the items and create their cards
     for (let item of items){
         itemDisplay1(item, menuItemsContainer)
@@ -751,12 +751,14 @@ function removeFromCart(itemName) {
 // Manager functionality to add menu items
 function managerAdd() {
     document.getElementById('add-item-button').addEventListener('click', function () {
-        const itemName = document.getElementById('item-name').value;
-        const itemCat = document.getElementById('item-cat').value.split(',').map(cat => cat.trim());
-        const itemDescription = document.getElementById('item-description').value;
-        const itemPrice = document.getElementById('item-price').value;
-        const itemImage = document.getElementById('item-image').value;
-
+        const itemName = document.getElementById('add-item-name').value;
+        const itemCat = document.getElementById('add-item-cat').value.split(',').map(cat => cat.trim());
+        const itemDescription = document.getElementById('add-item-description').value;
+        const itemPrice = document.getElementById('add-item-price').value;
+        const itemImage = document.getElementById('add-item-image').value;
+        console.log(itemName);
+        console.log(itemDescription);
+        console.log(itemCat);
         const newItem = {
             name: itemName,
             categories: itemCat,
@@ -770,11 +772,11 @@ function managerAdd() {
         items.push(newItem);
         localStorage.setItem('menuItems', JSON.stringify(items));
 
-        document.getElementById('item-name').value = '';
-        document.getElementById('item-cat').value = '';
-        document.getElementById('item-description').value = '';
-        document.getElementById('item-price').value = '';
-        document.getElementById('item-image').value = '';
+        document.getElementById('add-item-name').value = '';
+        document.getElementById('add-item-cat').value = '';
+        document.getElementById('add-item-description').value = '';
+        document.getElementById('add-item-price').value = '';
+        document.getElementById('add-item-image').value = '';
 
         displayMenuItems1();
     });
